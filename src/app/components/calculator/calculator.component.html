@@ -1,0 +1,22 @@
+
+<div class="calc">
+    <input
+      id="inputBox"
+      type="text"
+      name="output"
+      placeholder="42 / 0"
+      class="disabledInput"
+      [value]="inputVals"
+    />
+
+    <div class="buttons-container">
+      <button
+        *ngFor="let btn of buttonVals"
+        (click)="getInput($event, btn)"
+        type="button"
+        [className]="btn==='AC' ? 'danger-btn' : ''"
+      >
+        {{ btn }}
+      </button>
+    </div>
+</div>
